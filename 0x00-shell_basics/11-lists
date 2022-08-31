@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -al R /boot
+ls -Ral    
