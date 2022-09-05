@@ -1,1 +1,1 @@
-This Repo contains shell script for I/O redirection
+1. echo "Hello, world" : To print "Hello, World"
