@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n 3 iacta | tail -n 1
+find -mindepth 1 -type d | wc -l
