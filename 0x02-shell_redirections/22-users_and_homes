@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n 3 iacta | tail -n 1
+cut -d':' -f1,6 /etc/passwd | sort
