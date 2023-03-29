@@ -1,3 +1,7 @@
-#!/usr/bin/env bash
-# 
-ssh -i ~/.ssh/school ubuntu@3.83.227.12
+# SSH Config File
+#
+Host *
+	Hostname 3.83.227.12
+	User ubuntu
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
