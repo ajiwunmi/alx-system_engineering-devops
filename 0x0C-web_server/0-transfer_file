@@ -5,6 +5,7 @@
 #+    The IP of the server to transfer the file to.
 #+    The username that scp connects with.
 #+    The path to the SSH private key that scp uses.
+# ./0-transfer_file sample.html 3.83.227.12  ubuntu  ~/.ssh/id_rsa
 
 if [ $# -lt 4 ]
 then
