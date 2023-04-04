@@ -6,6 +6,8 @@
 #+    The username that scp connects with.
 #+    The path to the SSH private key that scp uses.
 # ./0-transfer_file sample.html 3.83.227.12  ubuntu  ~/.ssh/id_rsa
+# scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r  0x0C-web_server  ubuntu@3.83.227.12:~
+# sed -i -e 's/\r$//' 0-transfer_file
 
 if [ $# -lt 4 ]
 then
