@@ -2,7 +2,7 @@
 # installs nginx and configures it on a remote server
 
 apt-get -y update
-apt-get -y install nginx
+apt-get -y insc.tall nginx
 ufw allow 'Nginx HTTP'
 chown -R ${USER}:${USER} /var/www/html
 chmod -R 755 /var/www/html
