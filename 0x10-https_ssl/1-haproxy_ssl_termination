@@ -35,19 +35,19 @@ defaults
 
 
 
-# start of parameters for nwabueze.tech
-frontend nwabueze.tech-http-frontend
+# start of parameters for davic.tech
+frontend davic.tech-http-frontend
         bind     *:80
         redirect scheme https code 301 if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto http
-        default_backend  nwabueze.tech-backend
+        default_backend  davic.tech-backend
 frontend b3zaleel-alx.tech-https-frontend
-        bind *:443 ssl crt /etc/letsencrypt/live/www.nwabueze.tech/fullchain.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.davic.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend nwabueze.tech-backend
-backend nwabueze.tech-backend
+        default_backend davic.tech-backend
+backend davic.tech-backend
         balance roundrobin
-        server 17272-web-01 52.91.121.146:80 check
-        server 17272-web-02 3.85.136.181:80 check
+        server 119023-web-01 3.83.227.12:80 check
+        server 119023-web-02 54.164.31.132:80 check
 # end of parameters
                                                                                                  51,15         Bot
