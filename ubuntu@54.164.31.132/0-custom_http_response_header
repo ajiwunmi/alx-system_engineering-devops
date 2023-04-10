@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # Script that configures Nginx server with a custom header
-#
-#scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r  0x0F-load_balancer  ubuntu@54.164.31.132:~
-#
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
