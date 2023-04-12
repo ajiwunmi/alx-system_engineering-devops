@@ -2,7 +2,7 @@
 # Script that configures Nginx server with a custom header
 #
 #scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r  0x0F-load_balancer  ubuntu@54.164.31.132:~
-#
+# sed -i 's/\r$//' file to solve "/usr/bin/env: ‘bash\r’: No such file or directory""
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
