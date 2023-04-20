@@ -59,3 +59,28 @@ ufw delete 3
 
 Enable Ports or a Range of Ports Without an Application Profile
 ufw allow 80/tcp
+
+
+telnet is a very good tool to check if sockets are open with telnet IP PORT
+
+telnet 3.83.227.12  22
+
+We can also specify a range of ports.
+Let’s take, for example, the case of a WebRTC live streaming server that requires ports 5000 to 65000 to be opened on UDP protocol:
+
+ufw allow 5000:65000/udp
+
+if we don’t have an application profile but know the service name, we can specify that. In such a case, UFW will use the standard ports for that service. Let’s say we want to open ports for an FTP server (whose standard port is 21)
+ufw allow ftp
+
+To see the list of all supported services, we can inspect the /etc/services file:
+
+ Restrict Allowed IPs
+In many situations, we want to restrict access to services to specific IPs. For example, let’s limit SSH access (port 22) only to IP 1.2.3.4:
+ufw allow from 1.2.3.4 proto tcp to any port 22
+
+Limit the Number of Connections to a Given Port Over Time
+This helps prevent brute force attacks.
+
+Let’s reopen SSH connections to all IPs, but this time, with rate-limiting:
+ufw limit ssh
