@@ -84,3 +84,10 @@ This helps prevent brute force attacks.
 
 Let’s reopen SSH connections to all IPs, but this time, with rate-limiting:
 ufw limit ssh
+
+
+
+sudo systemctl restart ufw
+sudo systemctl status ufw.service
+
+netstat -lpn
