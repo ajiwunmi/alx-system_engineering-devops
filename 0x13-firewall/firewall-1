@@ -91,3 +91,5 @@ sudo systemctl restart ufw
 sudo systemctl status ufw.service
 
 netstat -lpn
+
+grep listen /etc/nginx/sites-enabled/default
